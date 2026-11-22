@@ -1913,6 +1913,12 @@ footer .footer-brand{font-size:15px;margin:0}
 .btn.cta:has(svg)::after{display:none}
 .btn.cta svg{width:22px;height:22px;flex:none}
 </style>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RSC864PQ8Y"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-RSC864PQ8Y');
+</script>
 </head>
 <body>
 <a href="#conteudo" class="skip-link">Pular para o conteúdo principal</a>
@@ -2889,7 +2895,7 @@ footer .footer-brand{font-size:15px;margin:0}
     }
     a.addEventListener('click', function () {
       if (window.fbq) window.fbq('trackCustom', 'ClickToCheckoutPage', { value: 17.00, currency: 'BRL' });
-      if (window.dataLayer) window.dataLayer.push({ event: 'click_to_checkout_page', value: 17, currency: 'BRL' });
+      if (window.gtag) window.gtag('event', 'select_promotion', { promotion_name: 'Petisco R$17 ate 30/11', creative_slot: (a.closest('.sticky') ? 'barra_fixa' : 'botao_pagina'), value: 17, currency: 'BRL' });
     });
   });
 })();

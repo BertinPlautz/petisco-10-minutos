@@ -43,6 +43,12 @@ h1{font-size:24px;font-weight:800;line-height:1.2;letter-spacing:-.01em}
 .end{margin-top:20px;font-size:13px;color:var(--muted);text-align:center}
 @media (prefers-reduced-motion:reduce){.cta{transition:none}}
 </style>
+<!-- Google Analytics 4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RSC864PQ8Y"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-RSC864PQ8Y');
+</script>
 </head>
 <body>
 <div class="top" role="note">PROMOÇÃO · R$17 só até 30/11</div>
@@ -101,7 +107,7 @@ h1{font-size:24px;font-weight:800;line-height:1.2;letter-spacing:-.01em}
   a.addEventListener('click', function () {
     try { a.href = buildHref(); } catch (e) {}
     if (window.fbq) window.fbq('track', 'InitiateCheckout', { value: 17.00, currency: 'BRL', content_name: 'Petisco de 10 Minutos', content_ids: ['9042445'], content_type: 'product' });
-    if (window.dataLayer) window.dataLayer.push({ event: 'initiate_checkout', value: 17, currency: 'BRL' });
+    if (window.gtag) window.gtag('event', 'begin_checkout', { value: 17, currency: 'BRL', items: [{ item_id: '9042445', item_name: 'Petisco de 10 Minutos', price: 17, quantity: 1 }] });
   });
 })();
 </script>

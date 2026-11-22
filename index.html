@@ -1900,7 +1900,7 @@ footer a {
           </ul>
 
           <div id="hero-cta-sentinel">
-            <a href="__CHECKOUT_URL__" class="btn cta">
+            <a href="/checkout" class="btn cta">
               <span>Quero o kit por R$17</span>
               <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m0 0-4.5-4.5M16 10l-4.5 4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
@@ -2275,12 +2275,12 @@ footer a {
           <div class="price-block">
             <div class="price-from">de <s>R$100</s> por apenas</div>
             <div class="price-now">R$17</div>
-            <div class="price-cond">pagamento único · ou 3x de R$6,12 · sem mensalidade</div>
+            <div class="price-cond">pagamento único · ou 3x de R$6,07 · sem mensalidade</div>
             <div class="price-sub">R$17 é menos que um pacote. E o arquivo é seu pra sempre, sem mensalidade.</div>
           </div>
 
           <div class="inline-cta-sentinel">
-            <a href="__CHECKOUT_URL__" class="btn cta">
+            <a href="/checkout" class="btn cta">
               <span>Quero o kit por R$17</span>
               <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m0 0-4.5-4.5M16 10l-4.5 4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
@@ -2490,11 +2490,11 @@ footer a {
         <h2 id="sec-final-titulo">Resumindo o que você leva hoje</h2>
         <p class="recap-copy"><strong>Resumindo:</strong> 50 receitas + 3 bônus. R$0,35 por petisco contra R$2,50 do pacote. R$17 uma vez. Acesso em 30 segundos. 7 dias pra testar com o seu cão.</p>
 
-        <a href="__CHECKOUT_URL__" class="btn cta">
+        <a href="/checkout" class="btn cta">
           <span>Quero o kit por R$17</span>
           <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h12m0 0-4.5-4.5M16 10l-4.5 4.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <p class="micro">Pix na hora · Cartão em 3x de R$6,12 · Boleto</p>
+        <p class="micro">Pix na hora · Cartão em 3x de R$6,07</p>
 
         <div class="seals">
           <span>🔒 Pagamento seguro</span>
@@ -2526,7 +2526,7 @@ footer a {
       <strong>R$17</strong>
       <span>50 receitas + 3 bônus</span>
     </div>
-    <a href="__CHECKOUT_URL__" class="btn cta">Quero o kit por R$17</a>
+    <a href="/checkout" class="btn cta">Quero o kit por R$17</a>
   </div>
 </div>
 
@@ -2812,8 +2812,8 @@ footer a {
       }
     }
     a.addEventListener('click', function () {
-      if (window.fbq) window.fbq('track', 'InitiateCheckout', { value: 17.00, currency: 'BRL' });
-      if (window.dataLayer) window.dataLayer.push({ event: 'initiate_checkout', value: 17, currency: 'BRL' });
+      if (window.fbq) window.fbq('trackCustom', 'ClickToCheckoutPage', { value: 17.00, currency: 'BRL' });
+      if (window.dataLayer) window.dataLayer.push({ event: 'click_to_checkout_page', value: 17, currency: 'BRL' });
     });
   });
 })();

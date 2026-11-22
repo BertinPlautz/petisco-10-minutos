@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Confirmar pedido — Petisco de 10 Minutos</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#7A2E0E">
+<link rel="preconnect" href="https://pay.hotmart.com" crossorigin>
+<link rel="preload" as="image" href="/img/capa-pedido.webp" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#FFFBF6;--ink:#2B2118;--muted:#5E5044;--btn:#15803D;--btn-h:#116B33;--line:#EEDCC6;--top:#7A2E0E;--r:12px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.45 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.top{background:var(--top);color:#fff;font-size:11px;font-weight:600;letter-spacing:.06em;text-align:center;padding:8px 12px}
+main{max-width:480px;margin:0 auto;padding:22px 18px 32px}
+h1{font-size:24px;font-weight:800;line-height:1.2;letter-spacing:-.01em}
+.card{display:flex;gap:14px;align-items:center;border:1px solid var(--line);border-radius:var(--r);background:#fff;padding:12px;margin-top:18px}
+.card img{width:56px;height:72px;border-radius:6px;flex:none;object-fit:cover;background:#243A2E}
+.card strong{display:block;font-size:15px;font-weight:600;line-height:1.3}
+.card span{display:block;font-size:13px;color:var(--muted);margin-top:3px}
+.price{margin-top:18px}
+.price b{display:block;font-size:34px;font-weight:800;line-height:1;letter-spacing:-.02em}
+.price small{display:block;font-size:13px;color:var(--muted);margin-top:6px}
+.checks{list-style:none;margin-top:16px;display:grid;gap:8px}
+.checks li{display:flex;gap:10px;align-items:center;font-size:14px;font-weight:600}
+.checks svg{flex:none}
+.cta{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:56px;margin-top:22px;border-radius:var(--r);background:var(--btn);color:#fff;font-size:17px;font-weight:800;text-decoration:none;box-shadow:0 6px 18px rgba(21,128,61,.28);transition:background .15s,transform .1s;-webkit-tap-highlight-color:transparent}
+.cta:hover{background:var(--btn-h)}
+.cta:active{transform:translateY(1px)}
+.cta:focus-visible{outline:3px solid #0B4D24;outline-offset:3px}
+.micro{text-align:center;font-size:12px;color:var(--muted);margin-top:8px}
+.seals{margin-top:18px;padding:10px 12px;border:1px dashed var(--line);border-radius:var(--r);text-align:center;font-size:12px;color:var(--muted)}
+.seals svg{vertical-align:-2px;margin-right:4px}
+.faq{margin-top:22px;border-top:1px solid var(--line)}
+.faq div{padding:12px 0;border-bottom:1px solid var(--line)}
+.faq dt{font-size:14px;font-weight:600}
+.faq dd{font-size:14px;color:var(--muted);margin-top:2px}
+.end{margin-top:20px;font-size:13px;color:var(--muted);text-align:center}
+@media (prefers-reduced-motion:reduce){.cta{transition:none}}
+</style>
+</head>
+<body>
+<div class="top" role="note">LOTE 1 · R$17 · encerra 30/11</div>
+<main>
+  <h1>Falta um passo: confirmar seu pedido.</h1>
+
+  <section class="card" aria-label="Resumo do pedido">
+    <img src="/img/capa-pedido.webp" width="56" height="72" fetchpriority="high" decoding="async" alt="Capa do guia Petisco de 10 Minutos">
+    <div>
+      <strong>Petisco de 10 Minutos — 50 receitas + 3 bônus</strong>
+      <span>Entrega imediata por e-mail e área de membros</span>
+    </div>
+  </section>
+
+  <div class="price">
+    <b>R$17</b>
+    <small>pagamento único · 3x de R$6,07</small>
+  </div>
+
+  <ul class="checks">
+    <li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#15803D"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Acesso em 30 segundos</li>
+    <li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#15803D"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Pix aprovado na hora</li>
+    <li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#15803D"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>7 dias de garantia</li>
+  </ul>
+
+  <a id="pay" class="cta" href="https://pay.hotmart.com/U108614108D?off=98tv6bec">
+    <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2" fill="none" stroke="#fff" stroke-width="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3" fill="none" stroke="#fff" stroke-width="2"/></svg>
+    Ir para o pagamento seguro
+  </a>
+  <p class="micro">você será levado ao checkout da Hotmart</p>
+
+  <p class="seals"><svg width="13" height="13" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.4 9.3-8 11-4.6-1.7-8-6-8-11V5l8-3z" fill="#5E5044"/></svg>pagamento processado pela Hotmart · dados criptografados · 7 dias de garantia</p>
+
+  <dl class="faq">
+    <div><dt>É físico?</dt><dd>Não, PDF no e-mail.</dd></div>
+    <div><dt>E se eu não gostar?</dt><dd>7 dias, reembolso total.</dd></div>
+  </dl>
+
+  <p class="end">Depois do pagamento, o acesso chega em 30 segundos no seu e-mail.</p>
+</main>
+
+<script>
+(function () {
+  var a = document.getElementById('pay');
+  function buildHref() {
+    var url = new URL(a.getAttribute('href'));
+    var cur = new URLSearchParams(window.location.search);
+    cur.forEach(function (v, k) { if (!url.searchParams.has(k)) url.searchParams.set(k, v); });
+    // sck padrão para atribuição na Hotmart quando só vier UTM
+    if (!url.searchParams.has('sck') && cur.get('utm_source')) {
+      url.searchParams.set('sck', [cur.get('utm_source'), cur.get('utm_campaign'), cur.get('utm_content')].filter(Boolean).join('|').slice(0, 100));
+    }
+    return url.toString();
+  }
+  try { a.href = buildHref(); } catch (e) {}
+  a.addEventListener('click', function () {
+    try { a.href = buildHref(); } catch (e) {}
+    if (window.fbq) window.fbq('track', 'InitiateCheckout', { value: 17.00, currency: 'BRL', content_name: 'Petisco de 10 Minutos', content_ids: ['9042445'], content_type: 'product' });
+    if (window.dataLayer) window.dataLayer.push({ event: 'initiate_checkout', value: 17, currency: 'BRL' });
+  });
+})();
+</script>
+
+<!-- Meta Pixel: troque __PIXEL_ID__ e descomente (mesmo ID da landing)
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','__PIXEL_ID__');fbq('track','PageView');
+</script>
+-->
+</body>
+</html>

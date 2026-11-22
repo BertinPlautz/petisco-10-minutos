@@ -74,7 +74,7 @@ gtag('js',new Date());gtag('config','G-RSC864PQ8Y');
     <li><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#15803D"/><path d="M7 12.5l3.2 3.2L17 9" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>7 dias de garantia</li>
   </ul>
 
-  <a id="pay" class="cta" href="https://pay.hotmart.com/U108614108D?checkoutMode=10">
+  <a id="pay" class="cta" href="https://pay.hotmart.com/U108614108D?checkoutMode=10&amp;sck=SID">
     <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2" fill="none" stroke="#fff" stroke-width="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3" fill="none" stroke="#fff" stroke-width="2"/></svg>
     Ir para o pagamento seguro
   </a>
@@ -96,6 +96,8 @@ gtag('js',new Date());gtag('config','G-RSC864PQ8Y');
   function buildHref() {
     var url = new URL(a.getAttribute('href'));
     var cur = new URLSearchParams(window.location.search);
+    var hsid = null; try { hsid = sessionStorage.getItem('__simbas_sid'); } catch (e) {}
+    if (url.searchParams.get('sck') === 'SID') { if (hsid) url.searchParams.set('sck', hsid); else url.searchParams.delete('sck'); }
     cur.forEach(function (v, k) { if (!url.searchParams.has(k)) url.searchParams.set(k, v); });
     // sck padrão para atribuição na Hotmart quando só vier UTM
     if (!url.searchParams.has('sck') && cur.get('utm_source')) {
@@ -103,7 +105,6 @@ gtag('js',new Date());gtag('config','G-RSC864PQ8Y');
     }
     return url.toString();
   }
-  try { a.href = buildHref(); } catch (e) {}
   a.addEventListener('click', function () {
     try { a.href = buildHref(); } catch (e) {}
     if (window.fbq) window.fbq('track', 'InitiateCheckout', { value: 17.00, currency: 'BRL', content_name: 'Petisco de 10 Minutos', content_ids: ['9042445'], content_type: 'product' });
@@ -117,5 +118,7 @@ gtag('js',new Date());gtag('config','G-RSC864PQ8Y');
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init','35007983302181877');fbq('track','PageView');
 </script>
+<!-- Hermes: tracker de atribuição (sck = sessão, liga a venda à origem) -->
+<script src="/simbas-utm-tracker-v3.min.js" data-product="petisco-10-minutos" data-endpoint="/api/attribution" data-checkout-selector="a[href*='pay.hotmart.com']"></script>
 </body>
 </html>

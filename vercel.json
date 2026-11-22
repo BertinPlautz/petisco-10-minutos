@@ -1,6 +1,11 @@
 {
   "version": 2,
   "cleanUrls": true,
+  "rewrites": [
+    { "source": "/api/attribution", "destination": "https://meu-cao-descomplicado.vercel.app/api/attribution" },
+    { "source": "/api/webhook/:plataforma", "destination": "https://meu-cao-descomplicado.vercel.app/api/webhook/:plataforma" },
+    { "source": "/simbas-utm-tracker-v3.min.js", "destination": "https://meu-cao-descomplicado.vercel.app/simbas-utm-tracker-v3.min.js" }
+  ],
   "headers": [
     {
       "source": "/img/(.*)",
